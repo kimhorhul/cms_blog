@@ -10,13 +10,13 @@ This project is built on Laravel 6.x during my studying at Niptict.
 #### Front-End
 - Listing Blog
 - Listing Blog via category
-- Single Post
+- Single Blog Page
 
 ## Package and Template
 In this project, I used some free open source packages and templates for integration.
 #### Package
 - CKEditor 5
-- CKfinder #
+- CKfinder 3
 
 #### Template
 - AdminLTE 3
