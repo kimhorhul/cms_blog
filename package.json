@@ -24,6 +24,6 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
-        "summernote": "^0.8.16"
+        "summernote": "^0.8.17"
     }
 }
