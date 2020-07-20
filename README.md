@@ -3,8 +3,8 @@ This project is built on Laravel 6.x during my studying at Niptict.
 
 ## Features
 #### Admin Dashboard
-- CRUD article
-- CRUD category
+- Manage article
+- Manage category
 - Trash article
 - Trash category
 #### Front-End
