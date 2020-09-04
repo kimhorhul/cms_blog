@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\News;
 use App\Category;
 use App\Http\Requests\News\UpdateNewsRequest;
-use Storage;
+use Illuminate\Support\Facades\Storage;
 use Auth;
 
 
@@ -55,7 +55,7 @@ class NewsController extends Controller
 
         //store data to database
 
-        $images = $request->image->store('news');
+        $images = $request->image->store('news', 'public');
         News::create([
             'title' => $request->title,
             'content' => $request->content,
@@ -112,17 +112,15 @@ class NewsController extends Controller
         //check if has new image
         if($request->has('image')){
             //update image
-            $image = $request->image->store('news');
+            $image = $request->image->store('news', 'public');
             //delete the old one
             Storage::delete($news->image);
-
             //update the image
             $data['image'] = $image;
         }
         $data['category_id'] = $request->category;
         //update the data
         $news->update($data);
-
         //return back
         return redirect()->route('news.index');
 
